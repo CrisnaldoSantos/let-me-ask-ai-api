@@ -1,5 +1,5 @@
-import { fastify } from "fastify";
 import { fastifyCors } from "@fastify/cors";
+import { fastify } from "fastify";
 import {
   serializerCompiler,
   validatorCompiler,
@@ -18,12 +18,4 @@ app.register(fastifyCors, {
 app.setValidatorCompiler(validatorCompiler);
 app.setSerializerCompiler(serializerCompiler);
 
-app
-  .listen({ port: env.PORT })
-  .then(() => {
-    console.log("Server is running!");
-  })
-  .catch((err) => {
-    console.error("Error starting server:", err);
-    process.exit(1);
-  });
+app.listen({ port: env.PORT });
