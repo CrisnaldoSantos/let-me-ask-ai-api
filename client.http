@@ -1,0 +1,19 @@
+@baseUrl = http://localhost:3333
+
+### Get all rooms
+# @name getRooms
+GET {{baseUrl}}/rooms
+
+### Create Room
+# @name createRoom
+POST {{baseUrl}}/rooms
+Content-Type: application/json
+
+{
+  "name": "Room Name",
+  "description": "Room Description"
+}
+
+### Get room questions
+# @name getRoomQuestions
+GET {{baseUrl}}/rooms/20b8b650-62c7-4286-cca6-c3693b7c8811/questions
