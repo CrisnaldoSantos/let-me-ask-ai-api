@@ -1,0 +1,1 @@
+ALTER TABLE "audio_chuncks" ADD COLUMN "transcription" text NOT NULL;
