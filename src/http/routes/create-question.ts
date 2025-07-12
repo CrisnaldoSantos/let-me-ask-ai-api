@@ -18,7 +18,7 @@ export const createQuestionRoute: FastifyPluginCallbackZod = (app) => {
         }),
       },
     },
-    // biome-ignore lint/correctness/noUnusedFunctionParameters: <>
+
     async (request, reply) => {
       const { question } = request.body;
       const { roomId } = request.params;
